@@ -576,6 +576,7 @@ nav {
 
 .method-icon::before { font-size: 1.5rem; }
 .email::before { content: '✉️'; }
+.phone::before { content: '📞'; }
 .github::before { content: '🐙'; }
 
 .method-details span {
