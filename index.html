@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karyle's CSS Portfolio</title>
+    <title>Karyle Librero | Portfolio</title>
+    <meta name="description" content="Personal Portfolio of Karyle Librero, an IT student and aspiring Web Developer.">
     <!-- Modern Font: Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,71 +19,94 @@
         <header>
             <div class="container">
                 <nav>
-                    <a href="#" class="logo">Karyle<span class="highlight">.dev</span></a>
+                    <a href="#home" class="logo">Karyle<span class="highlight">.dev</span></a>
+                    
+                    <!-- Mobile Menu Checkbox Hack -->
+                    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                    <label for="nav-toggle" class="nav-toggle-label">
+                        <span></span>
+                    </label>
+
                     <ul class="nav-links">
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#about">About</a></li>
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
-                    <label for="theme-checkbox" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
-                        <!-- Sun Icon (Visible in dark mode) -->
-                        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="5"></circle>
-                            <line x1="12" y1="1" x2="12" y2="3"></line>
-                            <line x1="12" y1="21" x2="12" y2="23"></line>
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                            <line x1="1" y1="12" x2="3" y2="12"></line>
-                            <line x1="21" y1="12" x2="23" y2="12"></line>
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                        </svg>
-                        <!-- Moon Icon (Visible in light mode) -->
-                        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                        </svg>
-                    </label>
+
+                    <div class="nav-actions">
+                        <label for="theme-checkbox" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
+                            <!-- Sun Icon -->
+                            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                            <!-- Moon Icon -->
+                            <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                        </label>
+                    </div>
                 </nav>
             </div>
         </header>
 
         <main>
-            <!-- Home Section -->
+            <!-- Hero Section -->
             <section class="hero" id="home">
                 <div class="hero-background"></div>
-                <div class="container">
+                <div class="container hero-container">
                     <div class="hero-content">
                         <h1 class="fade-in">Hi, I'm <span class="highlight">Karyle</span></h1>
-                        <p class="fade-in">I’m an aspiring programmer and IT student with a growing interest in web development. I enjoy creating websites and continuously improving my skills in HTML, CSS, and JavaScript.</p>
-                        <a href="#projects" class="btn btn-primary hero-btn bounce-in">View My Work</a>
+                        <div class="typewriter-container">
+                            <p class="typewriter-text">Aspiring IT Student & Web Developer</p>
+                        </div>
+                        <p class="hero-subtitle fade-in">I enjoy creating clean, responsive, and functional websites that solve real problems.</p>
+                        <div class="hero-btns fade-in">
+                            <a href="#projects" class="btn btn-primary bounce-in">Explore My Work</a>
+                            <a href="#contact" class="btn btn-outline bounce-in">Get In Touch</a>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- About Me Section -->
+            <!-- About Section -->
             <section id="about" class="about-section">
                 <div class="container">
                     <h2 class="section-title">About Me</h2>
                     <div class="about-content">
-                        <!-- Placeholder for Picture -->
-                        <div class="about-image">
-                            <img src="./assets/20260516_173422.png" alt="Karyle Librero Profile Picture" class="profile-img">
+                        <div class="about-image reveal">
+                            <img src="./assets/20260516_173422.png" alt="Karyle Librero" class="profile-img">
                         </div>
-                        <!-- About Text -->
-                        <div class="about-text">
-                            <h3>Who am I?</h3>
+                        <div class="about-text reveal">
+                            <h3>A Little Journey</h3>
                             <p>
-                                Hello! I'm <strong>Karyle Librero</strong>, an Information Technology student with a growing passion for web development and design. I enjoy building websites from the ground up, focusing on structure, styling, and responsiveness using HTML and CSS.
+                                I'm <strong>Maria Karyle Librero</strong>, an Information Technology enthusiast. My journey into tech started with a curiosity about how the web works, which quickly turned into a passion for front-end development.
                             </p>
                             <p>
-                                As a beginner in the tech field, I am constantly exploring new ideas and improving my skills through hands-on projects. I value creativity, attention to detail, and continuous learning. My goal is to create websites that are not only functional but also visually engaging and user-friendly.
+                                I focus on building structured, accessible, and visually appealing web experiences using <strong>HTML and CSS</strong>. I'm a continuous learner, always exploring new techniques to improve my craft.
                             </p>
                             <p>
-                              Outside of coding, I’m also interested in leadership, creativity, and collaborating with others—experiences that help me grow both personally and professionally.
+                                My goal is to bridge the gap between complex code and user-friendly interfaces, making the web a better place one project at a time.
                             </p>
-                            <a href="#contact" class="btn btn-primary">Let's Talk</a>
+                            <div class="about-info">
+                                <div class="info-item">
+                                    <span class="info-label">Degree:</span>
+                                    <span>BS Information Technology</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="info-label">Focus:</span>
+                                    <span>Front-end Development</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -91,46 +115,28 @@
             <!-- Skills Section -->
             <section id="skills" class="skills-section">
                 <div class="container">
-                    <h2 class="section-title">My Skills</h2>
+                    <h2 class="section-title">My Technical Stack</h2>
                     <div class="skills-grid">
-                        
-                        <div class="skill-card">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#E34F26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 1rem; filter: drop-shadow(0 4px 6px rgba(227, 79, 38, 0.2));">
-                                <polyline points="16 18 22 12 16 6"></polyline>
-                                <polyline points="8 6 2 12 8 18"></polyline>
-                            </svg>
-                            <h3>HTML</h3>
-                            <p>Builds the structure of web pages using clean and semantic code.</p>
+                        <div class="skill-card reveal">
+                            <div class="skill-icon html"></div>
+                            <h3>HTML5</h3>
+                            <p>Semantic markup and web accessibility focus.</p>
                         </div>
-
-                        <div class="skill-card">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1572B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 1rem; filter: drop-shadow(0 4px 6px rgba(21, 114, 182, 0.2));">
-                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                                <line x1="3" y1="9" x2="21" y2="9"></line>
-                                <line x1="9" y1="21" x2="9" y2="9"></line>
-                            </svg>
-                            <h3>CSS</h3>
-                            <p>Designs and styles websites with responsive layouts and animations.</p>
+                        <div class="skill-card reveal">
+                            <div class="skill-icon css"></div>
+                            <h3>CSS3</h3>
+                            <p>Modern layouts, animations, and responsive design.</p>
                         </div>
-
-                        <div class="skill-card">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F7DF1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 1rem; filter: drop-shadow(0 4px 6px rgba(247, 223, 30, 0.2));">
-                                <polyline points="4 17 10 11 4 5"></polyline>
-                                <line x1="12" y1="19" x2="20" y2="19"></line>
-                            </svg>
+                        <div class="skill-card reveal">
+                            <div class="skill-icon js"></div>
                             <h3>JavaScript</h3>
-                            <p>Adds interactivity and dynamic features to improve user experience.</p>
+                            <p>Adding interactivity and dynamic functionality.</p>
                         </div>
-
-                        <div class="skill-card">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 1rem; filter: drop-shadow(0 4px 6px var(--accent-light));">
-                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                                <line x1="12" y1="18" x2="12.01" y2="18"></line>
-                            </svg>
+                        <div class="skill-card reveal">
+                            <div class="skill-icon responsive"></div>
                             <h3>Responsive Design</h3>
-                            <p>Ensures that websites adapt seamlessly to all devices and screen sizes.</p>
+                            <p>Pixel-perfect display on any screen size.</p>
                         </div>
-
                     </div>
                 </div>
             </section>
@@ -138,78 +144,223 @@
             <!-- Projects Section -->
             <section class="projects-section" id="projects">
                 <div class="container">
-                    <h2 class="section-title">Projects</h2>
-                    <div class="grid">
-                        
-                        <!-- Sample Project 1 -->
-                        <div class="card">
-                            <div class="card-content">
-                                <h3 class="card-title">Modern Landing Page</h3>
-                                <p class="card-desc">A beautiful, fully responsive landing page designed with modern CSS features including CSS Grid, Flexbox, and CSS Variables.</p>
-                                <div class="card-links">
-                                    <a href="#" class="btn btn-primary">Live Demo</a>
-                                    <a href="#" class="btn btn-outline">Source Code</a>
+                    <h2 class="section-title">Recent Projects</h2>
+                    <div class="project-grid">
+                        <!-- Project 1 -->
+                        <div class="project-card reveal">
+                            <div class="project-info">
+                                <h3 class="project-title">First HTML Project</h3>
+                                <p class="project-desc">My first HTML project exploring basic web structure.</p>
+                                <div class="project-links">
+                                    <a href="https://first-html-project-beryl.vercel.app/" target="_blank" class="project-link demo">Live Demo</a>
+                                    <a href="https://github.com/mariakarylelibrero/first-html-project" target="_blank" class="project-link code">GitHub</a>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Sample Project 2 -->
-                        <div class="card">
-                            <div class="card-content">
-                                <h3 class="card-title">CSS-Only Dashboard</h3>
-                                <p class="card-desc">An interactive dashboard layout built completely without any CSS frameworks like Bootstrap, featuring dynamic hover states and layout shifts.</p>
-                                <div class="card-links">
-                                    <a href="#" class="btn btn-primary">Live Demo</a>
-                                    <a href="#" class="btn btn-outline">Source Code</a>
+                        <!-- Project 2 -->
+                        <div class="project-card reveal">
+                            <div class="project-info">
+                                <h3 class="project-title">HTML IT Project Demo</h3>
+                                <p class="project-desc">A demo project showcasing IT-focused web elements.</p>
+                                <div class="project-links">
+                                    <a href="https://html-it-project-demo.vercel.app/" target="_blank" class="project-link demo">Live Demo</a>
+                                    <a href="https://github.com/mariakarylelibrero/html-it-project-demo" target="_blank" class="project-link code">GitHub</a>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Sample Project 3 -->
-                        <div class="card">
-                            <div class="card-content">
-                                <h3 class="card-title">Interactive Animations</h3>
-                                <p class="card-desc">Showcasing complex micro-interactions and smooth keyframe animations using advanced functional CSS properties.</p>
-                                <div class="card-links">
-                                    <a href="#" class="btn btn-primary">Live Demo</a>
-                                    <a href="#" class="btn btn-outline">Source Code</a>
+                        <!-- Project 3 -->
+                        <div class="project-card reveal">
+                            <div class="project-info">
+                                <h3 class="project-title">HTML IT Portal iFrame</h3>
+                                <p class="project-desc">Implementing iFrames in an IT portal layout.</p>
+                                <div class="project-links">
+                                    <a href="https://html-it-portal-iframe-kappa.vercel.app/" target="_blank" class="project-link demo">Live Demo</a>
+                                    <a href="https://github.com/mariakarylelibrero/html-IT-portal-iframe" target="_blank" class="project-link code">GitHub</a>
                                 </div>
                             </div>
                         </div>
-
+                        <!-- Project 4 -->
+                        <div class="project-card reveal">
+                            <div class="project-info">
+                                <h3 class="project-title">Simple HTML Table</h3>
+                                <p class="project-desc">A schedule project built with clean HTML tables.</p>
+                                <div class="project-links">
+                                    <a href="https://html-it-students-schedule-librero-k.vercel.app/" target="_blank" class="project-link demo">Live Demo</a>
+                                    <a href="https://github.com/mariakarylelibrero/html-it-students-schedule-librero-karyle" target="_blank" class="project-link code">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 5 -->
+                        <div class="project-card reveal">
+                            <div class="project-info">
+                                <h3 class="project-title">Student Registration Form</h3>
+                                <p class="project-desc">A functional-looking student registration form UI.</p>
+                                <div class="project-links">
+                                    <a href="https://html-student-registration-form-libr.vercel.app/" target="_blank" class="project-link demo">Live Demo</a>
+                                    <a href="https://github.com/mariakarylelibrero/html-student-registration-form-librero-karyle" target="_blank" class="project-link code">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 6 -->
+                        <div class="project-card reveal">
+                            <div class="project-info">
+                                <h3 class="project-title">HTML Study Playlist</h3>
+                                <p class="project-desc">A curated study playlist project using HTML lists.</p>
+                                <div class="project-links">
+                                    <a href="https://html-study-playlist-librero-karyle.vercel.app/" target="_blank" class="project-link demo">Live Demo</a>
+                                    <a href="https://github.com/mariakarylelibrero/html-study-playlist-librero-karyle" target="_blank" class="project-link code">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 7 -->
+                        <div class="project-card reveal">
+                            <div class="project-info">
+                                <h3 class="project-title">User Account Creation</h3>
+                                <p class="project-desc">Interactive account creation interface design.</p>
+                                <div class="project-links">
+                                    <a href="https://html-user-account-creation-librero.vercel.app/" target="_blank" class="project-link demo">Live Demo</a>
+                                    <a href="https://github.com/mariakarylelibrero/html-user-account-creation-librero-karyle" target="_blank" class="project-link code">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 8 -->
+                        <div class="project-card reveal">
+                            <div class="project-info">
+                                <h3 class="project-title">HTML Survey Form</h3>
+                                <p class="project-desc">Survey form for a certification project milestone.</p>
+                                <div class="project-links">
+                                    <a href="https://html-certification-project.vercel.app/" target="_blank" class="project-link demo">Live Demo</a>
+                                    <a href="https://github.com/mariakarylelibrero/html-certification-project" target="_blank" class="project-link code">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 9 -->
+                        <div class="project-card reveal">
+                            <div class="project-info">
+                                <h3 class="project-title">Login & Registration</h3>
+                                <p class="project-desc">A responsive login and signup page design.</p>
+                                <div class="project-links">
+                                    <a href="https://login-registration-page-silk.vercel.app/" target="_blank" class="project-link demo">Live Demo</a>
+                                    <a href="https://github.com/mariakarylelibrero/login-registration-page" target="_blank" class="project-link code">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 10 -->
+                        <div class="project-card reveal">
+                            <div class="project-info">
+                                <h3 class="project-title">Personal Pocket Vault</h3>
+                                <p class="project-desc">Private notes web app connecting to live storage.</p>
+                                <div class="project-links">
+                                    <a href="https://pocket-vault-project-plum.vercel.app/" target="_blank" class="project-link demo">Live Demo</a>
+                                    <a href="https://github.com/mariakarylelibrero/PocketVault_Project" target="_blank" class="project-link code">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 11 -->
+                        <div class="project-card reveal">
+                            <div class="project-info">
+                                <h3 class="project-title">Cyber Snake Game</h3>
+                                <p class="project-desc">A neon-themed retro snake game built with JS Canvas.</p>
+                                <div class="project-links">
+                                    <a href="https://cyber-snake-alpha.vercel.app/" target="_blank" class="project-link demo">Live Demo</a>
+                                    <a href="https://github.com/mariakarylelibrero/cyber-snake" target="_blank" class="project-link code">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 12 -->
+                        <div class="project-card reveal">
+                            <div class="project-info">
+                                <h3 class="project-title">World Weather Tracker</h3>
+                                <p class="project-desc">Real-time weather tracking application.</p>
+                                <div class="project-links">
+                                    <a href="https://weather-app-project-seven-virid.vercel.app/" target="_blank" class="project-link demo">Live Demo</a>
+                                    <a href="https://github.com/mariakarylelibrero/weather-app-project" target="_blank" class="project-link code">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 13 -->
+                        <div class="project-card reveal">
+                            <div class="project-info">
+                                <h3 class="project-title">HTML Portfolio</h3>
+                                <p class="project-desc">A simple and clean HTML-only portfolio version.</p>
+                                <div class="project-links">
+                                    <a href="https://my-html-portfolio-virid.vercel.app/" target="_blank" class="project-link demo">Live Demo</a>
+                                    <a href="https://github.com/mariakarylelibrero/my_html_portfolio" target="_blank" class="project-link code">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project 14 -->
+                        <div class="project-card reveal active">
+                            <div class="project-info">
+                                <h3 class="project-title">CSS Portfolio</h3>
+                                <p class="project-desc">My current premium CSS-driven web portfolio.</p>
+                                <div class="project-links">
+                                    <a href="https://my-css-portfolio-snowy.vercel.app/" target="_blank" class="project-link demo">Live Demo</a>
+                                    <a href="https://github.com/mariakarylelibrero/my-css-portfolio" target="_blank" class="project-link code">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
             <!-- Contact Section -->
             <section id="contact" class="contact-section">
-                <div class="container contact-wrapper">
-                    <h2 class="section-title">Contact Me</h2>
-                    <p>
-                        I'm open to collaborations, school projects, and opportunities to learn and grow in the tech field. Feel free to reach out if you have any questions or just want to connect!
-                    </p>
-                    <div class="contact-cards">
-                        <a href="mailto:mariakarylelibrero@gmail.com" class="contact-card">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                            <span>mariakarylelibrero@gmail.com</span>
-                        </a>
-                        <a href="tel:09070430981" class="contact-card">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                            <span>09070430981</span>
-                        </a>
-                        <a href="https://github.com/mariakarylelibrero" target="_blank" rel="noopener noreferrer" class="contact-card">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                            <span>github.com/mariakarylelibrero</span>
-                        </a>
+                <div class="container">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="contact-container">
+                        <div class="contact-info reveal">
+                            <h3>Let's Connect</h3>
+                            <p>I'm always open to discussing new projects, creative ideas or school collaborations.</p>
+                            
+                            <div class="contact-methods">
+                                <a href="mailto:mariakarylelibrero@gmail.com" class="method-card">
+                                    <div class="method-icon email"></div>
+                                    <div class="method-details">
+                                        <span>Email Me</span>
+                                        <strong>mariakarylelibrero@gmail.com</strong>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/mariakarylelibrero" target="_blank" class="method-card">
+                                    <div class="method-icon github"></div>
+                                    <div class="method-details">
+                                        <span>Follow Me</span>
+                                        <strong>@mariakarylelibrero</strong>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <form action="#" class="contact-form reveal">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" rows="5" placeholder="Let's build something amazing!" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
                     </div>
                 </div>
             </section>
         </main>
 
         <footer>
-            <div class="container">
-                <p>&copy; 2026 LibreroKaryle. All rights reserved.</p>
+            <div class="container footer-content">
+                <p>&copy; 2026 Karyle Librero. Crafted with pure HTML & CSS.</p>
+                <div class="social-links">
+                    <a href="https://github.com/mariakarylelibrero" target="_blank" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
+                </div>
             </div>
         </footer>
     </div>
 </body>
 </html>
+
