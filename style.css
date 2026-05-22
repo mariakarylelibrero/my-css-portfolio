@@ -241,6 +241,8 @@ nav {
 }
 
 .typewriter-container {
+  display: flex;
+  justify-content: center;
   margin-bottom: 1.5rem;
 }
 
@@ -252,13 +254,14 @@ nav {
   white-space: nowrap;
   overflow: hidden;
   width: 0;
-  animation: typing 3.5s steps(20, end) infinite, blink 0.75s step-end infinite;
+  display: block;
+  animation: typing 4s steps(36, end) infinite, blink 0.75s step-end infinite;
 }
 
 @keyframes typing {
   0% { width: 0 }
-  40% { width: 100% }
-  60% { width: 100% }
+  45% { width: 36ch } /* Exactly 36 characters */
+  55% { width: 36ch }
   100% { width: 0 }
 }
 
